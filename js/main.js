@@ -26,30 +26,6 @@ window.onclick = function(event) {
 }
 
 
-// Voice recognition app
-const btn = document.querySelector('.talk');
-const content = document.querySelector('.content');
-
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-
-recognition.onstart = function(){
-  console.log('Voice is activated!');
-};
-
-recognition.onresult = function(event){
-  console.log(event);
-};
-
-// Add the listener to the btn
-btn.addEventListener('click', () => {
-  recognition.start();
-});
-
-
-
-
-
 
 
 
