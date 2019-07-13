@@ -1,12 +1,12 @@
 // Voice recognition app
-const btn = document.querySelector('.talk');
-const content = document.querySelector('.content');
+const mic = document.querySelector('.talk');
+const content = document.querySelector('.question');
 
 // Different types of scenarios - Possible answers of topics
 const greetings = [
-  'Welcome back',
-  'How are you doing',
-  'Nice to see you again'
+  'Welcome back!',
+  'How are you doing?',
+  'Nice to see you again!'
 ];
 
 const weather = [
@@ -33,13 +33,14 @@ recognition.onresult = function(event){
   readOutLoud(transcript);
 };
 
-// Add the listener to the btn
-btn.addEventListener('click', () => {
+// Add the listener to the mic
+mic.addEventListener('click', () => {
   recognition.start();
 });
 
 // Read out the message
 function readOutLoud(message){
+  const answer = document.querySelector('.answer');
   const speech = new SpeechSynthesisUtterance();
   const voices = window.speechSynthesis.getVoices();
   const mistake = 'Sorry, I did\'t catch that. Could you say it again?';
@@ -53,10 +54,13 @@ function readOutLoud(message){
   }
 
   // the list of the available voices - https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices
+  // [1] Google US English (en-US)
   speech.voice = voices[1];
   speech.volume = 1;
   speech.rate = 1;
   speech.pitch = 1;
+  speech.lang = 'en-US';
 
   window.speechSynthesis.speak(speech);
+  answer.innerHTML = speech.text;
 }

@@ -27,7 +27,8 @@ section{
   font-weight: 300;
   text-shadow: var(--text-sh-);
 }
-.question_panel{
+.question_panel,
+.answer_panel{
   display: flex;
   margin: 1em auto;
   padding: 0.2em 1em;
@@ -37,19 +38,23 @@ section{
   box-shadow: var(--shadow1-);
   text-align: center;
 }
-.question_panel p:nth-child(1){
+.question_panel p:nth-child(1),
+.answer_panel p:nth-child(1){
   margin-left: 5px;
 }
-.question_panel p{
+.question_panel p,
+.answer_panel p{
   font-weight: 300;
   font-size: 1.2em;
   color: var(--dc-);
 }
-.content{
+.question,
+.answer{
   margin-left: 1em;
   color: var(--gr-) !important;
 }
-.content::first-letter{
+.question::first-letter,
+.answer::first-letter{
   text-transform: capitalize;
 }
 ._search{
