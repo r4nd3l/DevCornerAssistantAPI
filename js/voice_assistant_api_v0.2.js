@@ -1,12 +1,15 @@
 // Voice recognition app
-const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
+
+function startAPI(){
+  recognition.start();
+}
 
 // Different types of scenarios - Possible answers of topics
 const greetings = [
   'Welcome back',
-  'How are you doing',
-  'Nice to see you again'
+  'Nice to see you again',
+  'I\'m doing fine, thanks for asking'
 ];
 
 const weather = [
@@ -21,7 +24,7 @@ const recognition = new SpeechRecognition();
 
 // Checking the console log
 recognition.onstart = function(){
-  console.log('Voice assistan API is loaded, ready to start!');
+  console.log('Voice assistan API is activated!');
 };
 
 // Write out the message
@@ -32,11 +35,6 @@ recognition.onresult = function(event){
   content.textContent = transcript;
   readOutLoud(transcript);
 };
-
-// Add the listener to the btn
-btn.addEventListener('click', () => {
-  recognition.start();
-});
 
 // Read out the message
 function readOutLoud(message){

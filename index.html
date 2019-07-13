@@ -22,11 +22,15 @@
 
   <title>DevCorner</title>
 </head>
-<body>
+<body><!-- onload="startAPI();" -->
   <i class="fas fa-code" id="_myBtn"></i>
   <!-- Content will goes here -->
   <section>
-    <button class="talk">Talk</button>
+    <!-- <button class="talk">Talk</button> -->
+    <label class="switch">
+      <input type="checkbox" class="talk">
+      <span class="slider round"></span>
+    </label>
     <h3 class="content"></h3>
   </section>
   <!-- Content will goes here - END -->
@@ -43,6 +47,11 @@
   </div>
   <!-- The Modal - END -->
   <script src="js/main.js" charset="utf-8"></script>
+
+  <!-- Autoload experiment - [Deprecation] speechSynthesis.speak() without user activation is no longer allowed since M71 -->
+  <!-- <script src="js/voice_assistant_api_v0.2.js" charset="utf-8"></script> -->
+
+  <!-- Triggered by user activation -->
   <script src="js/voice_assistant_api.js" charset="utf-8"></script>
 
 </body>
