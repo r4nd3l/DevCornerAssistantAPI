@@ -7,67 +7,81 @@ body{
   margin: 0;
   padding: 0;
 }
-
 section{
   margin: 10vh auto;
+}
+.ask_panel{
+  margin: 0 auto;
   text-align: center;
-  padding: 5em;
-  width: 30vw;
+  padding: 2rem;
+  width: 40vw;
+  height: 23vh;
   border-radius: 1em;
   background: var(--sg-);
   box-shadow: var(--shadow1-);
 }
-
-/* Switches */
-.switch {
+.ask_panel h3:first-child{
+  margin: 0 auto 1em;
+  color: var(--gr-);
+  font-size: 2em;
+  font-weight: 300;
+  text-shadow: var(--text-sh-);
+}
+.question_panel{
+  display: flex;
+  margin: 1em auto;
+  padding: 0.2em 1em;
+  width: 40vw;
+  border-radius: 1em;
+  background: var(--sg-);
+  box-shadow: var(--shadow1-);
+  text-align: center;
+}
+.question_panel p:nth-child(1){
+  margin-left: 5px;
+}
+.question_panel p{
+  font-weight: 300;
+  font-size: 1.2em;
+  color: var(--dc-);
+}
+.content{
+  margin-left: 1em;
+  color: var(--gr-) !important;
+}
+.content::first-letter{
+  text-transform: capitalize;
+}
+._search{
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
 }
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+._searchField{
+  width: 25em;
+  border-radius: 1.25rem;
+  border: 1px solid var(--lg-);
+  outline: none;
+  padding: 0.6em 0.8em 0.5em;
+  font-size: 1.2em;
+  color: var(--gr-);
 }
-.slider {
+._searchField:hover{
+  box-shadow: var(--shadow1-);
+  border: 1px solid var(--dc-);
+}
+._microphone{
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-.slider:before {
-  position: absolute;
-  content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  left: auto;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  font-size: 1.5em;
+  color: var(--gr-);
 }
-input:checked + .slider {
-  background-color: var(--dc-);
-}
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-.slider.round {
-  border-radius: 34px;
-}
-.slider.round:before {
-  border-radius: 50%;
+._microphone:hover{
+  cursor: pointer;
+  color: var(--dc-);
 }
 
 
