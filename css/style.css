@@ -14,8 +14,8 @@ section{
   margin: 0 auto;
   text-align: center;
   padding: 2rem;
-  width: 40vw;
-  height: 23vh;
+  width: 35em;
+  height: 12em;
   border-radius: 1em;
   background: var(--sg-);
   box-shadow: var(--shadow1-);
@@ -32,7 +32,7 @@ section{
   display: flex;
   margin: 1em auto;
   padding: 0.2em 1em;
-  width: 40vw;
+  width: 35em;
   border-radius: 1em;
   background: var(--sg-);
   box-shadow: var(--shadow1-);
